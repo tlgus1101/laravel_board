@@ -167,6 +167,11 @@ return [
         /*
          * Package Service Providers...
          */
+        Prettus\Repository\Providers\RepositoryServiceProvider::class,
+        Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+        //Collective\Html\HtmlServiceProvider::class,
+        App\Providers\RepositoryServiceProvider::class,
+
 
         /*
          * Application Service Providers...
@@ -177,6 +182,10 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
 
+        App\Providers\RepositoryServiceProvider :: class,
+       // App\Repositories\ArticleRepositoryEloquent :: class,
+        ///
+        Collective\Html\HtmlServiceProvider::class,
     ],
 
     /*
@@ -225,6 +234,12 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+
+
+        ////////////////
+        'Form' => laravelcollective\Html\src\FormFacade::class,
+        'Html' => laravelcollective\Html\src\HtmlFacade::class,
 
     ],
 
